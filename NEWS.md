@@ -1,5 +1,9 @@
 # Version 2024.6.17
 
+- Allows for `CS9_DBCONFIG_ROLE_CREATE_TABLE` in environmental variables.
+
+# Version 2024.6.17
+
 - When running in parallel, a seed is set according to the index of the first analysis in each plan.
 
 # Version 2024.6.6
