@@ -13,10 +13,13 @@ SurveillanceSystem_v9 <- R6::R6Class(
     tasks = list(),
     implementation_version = NULL,
     #' Constructor
+    #' @param name A string that the user may choose to use to track performance metrics (runtime and RAM usage)
     #' @param implementation_version A string that the user may choose to use to track performance metrics (runtime and RAM usage)
     initialize = function(
+      name = "unspecified",
       implementation_version = "unspecified"
     ) {
+      self$name <- name
       self$implementation_version <- implementation_version
     },
     #' @description
@@ -209,6 +212,7 @@ SurveillanceSystem_v9 <- R6::R6Class(
           data_selector_fn_name = data_selector_fn_name,
           tables = tables
         )
+        task$ss <- self$name
         task$implementation_version <- self$implementation_version
         self$tasks[[task$name]] <- task
     },

@@ -16,6 +16,7 @@ Task <- R6::R6Class(
     update_plans_fn = NULL,
     action_before_fn = NULL,
     action_after_fn = NULL,
+    ss = "unspecified",
     implementation_version = "unspecified",
     initialize = function(
       name_grouping = NULL,
@@ -123,6 +124,7 @@ Task <- R6::R6Class(
       on.exit({
         if(status=="failed") ram_max_used_mb <- 0
         update_config_tasks_stats(
+          ss = self$ss,
           task = self$name,
           implementation_version = self$implementation_version,
           cores_n = cores,

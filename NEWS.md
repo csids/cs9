@@ -1,3 +1,7 @@
+# Version 2025.2.21
+
+- **Added `update_config_log` function**. Logs configuration updates including surveillance system (`ss`), task name (`task`), and a custom `message`.
+
 # Version 2024.6.17
 
 - Allows for `CS9_DBCONFIG_ROLE_CREATE_TABLE` in environmental variables.

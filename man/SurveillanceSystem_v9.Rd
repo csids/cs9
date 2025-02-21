@@ -76,12 +76,17 @@ global$ss$add_table(
 \if{latex}{\out{\hypertarget{method-SurveillanceSystem_v9-new}{}}}
 \subsection{Method \code{new()}}{
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{SurveillanceSystem_v9$new(implementation_version = "unspecified")}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{SurveillanceSystem_v9$new(
+  name = "unspecified",
+  implementation_version = "unspecified"
+)}\if{html}{\out{</div>}}
 }
 
 \subsection{Arguments}{
 \if{html}{\out{<div class="arguments">}}
 \describe{
+\item{\code{name}}{A string that the user may choose to use to track performance metrics (runtime and RAM usage)}
+
 \item{\code{implementation_version}}{A string that the user may choose to use to track performance metrics (runtime and RAM usage)}
 }
 \if{html}{\out{</div>}}

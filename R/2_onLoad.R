@@ -7,6 +7,28 @@
   if(length(config$dbconfigs) == 0){
     packageStartupMessage("CS9 dbconfigs not properly set up.")
   } else {
+    # config_log ----
+    config$tables$config_log <- csdb::DBTable_v9$new(
+      dbconfig = config$dbconfigs$config,
+      table_name = "config_log",
+      field_types = c(
+        "auto_interactive" = "TEXT",
+        "ss" = "TEXT",
+        "task" = "TEXT",
+        "date" = "DATE",
+        "datetime" = "DATETIME",
+        "message" = "TEXT"
+      ),
+      keys = c(
+        "auto_interactive",
+        "ss",
+        "task",
+        "datetime"
+      ),
+      validator_field_types = csdb::validator_field_types_blank,
+      validator_field_contents = csdb::validator_field_contents_blank
+    )
+
     # config_tables_last_updated ----
     config$tables$config_tables_last_updated <- csdb::DBTable_v9$new(
       dbconfig = config$dbconfigs$config,
@@ -28,8 +50,10 @@
       dbconfig = config$dbconfigs$config,
       table_name = "config_tasks_stats",
       field_types = c(
+        "auto_interactive" = "TEXT",
+        "ss" = "TEXT",
         "task" = "TEXT",
-        "sc_version" = "TEXT",
+        "cs_version" = "TEXT",
         "implementation_version" = "TEXT",
         "cores_n" = "INTEGER",
         "plans_n" = "INTEGER",
@@ -44,6 +68,8 @@
         "status" = "TEXT"
       ),
       keys = c(
+        "auto_interactive",
+        "ss",
         "task",
         "start_datetime"
       ),

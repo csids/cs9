@@ -1,4 +1,5 @@
 update_config_tasks_stats <- function(
+    ss = "unspecified",
     task,
     implementation_version = "unspecified",
     cores_n,
@@ -21,8 +22,10 @@ update_config_tasks_stats <- function(
   stop_date <- stringr::str_sub(stop_datetime, 1, 10)
 
   to_upload <- data.table(
+    auto_interactive = ifelse(config$is_auto, "auto", "interactive"),
+    ss = ss,
     task = task,
-    sc_version = utils::packageDescription("cs9", fields = "Version"),
+    cs_version = utils::packageDescription("cs9", fields = "Version"),
     implementation_version = implementation_version,
     cores_n = cores_n,
     plans_n = plans_n,
