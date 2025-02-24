@@ -28,7 +28,7 @@ update_config_log <- function(
     ...
 ) {
   # Capture ... as a single string for logging
-  msg <- paste(..., collapse = " ")
+  msg <- paste0(..., collapse = "")
 
   # Check that message is not null
   stopifnot(!is.null(msg))
