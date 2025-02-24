@@ -9,3 +9,13 @@ articles:
   contents:
   - installation
   - file-layout
+
+reference:
+- title: Build
+  desc:  Build a complete site or its individual section components.
+- contents:
+  - starts_with("build_")
+- title: Templates
+- contents:
+  - template_navbar
+  - render_page

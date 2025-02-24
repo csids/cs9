@@ -4,14 +4,14 @@
 \alias{update_config_log}
 \title{Update Configuration Log}
 \usage{
-update_config_log(ss = "unspecified", task = "unspecified", message = NULL)
+update_config_log(ss = "unspecified", task = "unspecified", ...)
 }
 \arguments{
 \item{ss}{Character. Surveillance system identifier. Defaults to \code{"unspecified"}.}
 
 \item{task}{Character. Name of the task being logged. Defaults to \code{"unspecified"}.}
 
-\item{message}{Character. Custom message describing the log entry. Must not be \code{NULL}.}
+\item{...}{Character. Custom message describing the log entry. Must not be \code{NULL}.}
 }
 \value{
 No return value; this function is called for its side effect of inserting

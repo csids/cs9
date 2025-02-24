@@ -1,3 +1,13 @@
+# Version 2025.2.24
+
+### New Features
+- Added `get_config_log()` function to retrieve configuration log entries from the `config_log` table.  
+  - Supports optional filtering by surveillance system (`ss`), task name (`task`), and date range (`start_date`, `end_date`).
+  - Returns a `data.table` with the filtered entries.
+
+### Improvements
+- Updated `update_config_log()` to also route custom messages (`...`) to the `message()` function for clearer console output.
+
 # Version 2025.2.21
 
 - **Added `update_config_log` function**. Logs configuration updates including surveillance system (`ss`), task name (`task`), and a custom `message`.
