@@ -11,6 +11,7 @@ SurveillanceSystem_v9 <- R6::R6Class(
     tables = list(),
     partitionedtables = list(),
     tasks = list(),
+    name = NULL,
     implementation_version = NULL,
     #' Constructor
     #' @param name A string that the user may choose to use to track performance metrics (runtime and RAM usage)

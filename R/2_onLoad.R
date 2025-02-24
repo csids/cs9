@@ -1,5 +1,4 @@
 .onLoad <- function(libname, pkgname) {
-
   set_env_vars()
   set_progressr()
   set_plnr()
@@ -115,7 +114,6 @@ get_db_acess_from_env <- function() {
 }
 
 get_db_from_env <- function(access) {
-
   retval <- list(
     access = access,
     driver = Sys.getenv("CS9_DBCONFIG_DRIVER"),
