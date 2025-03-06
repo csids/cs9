@@ -147,7 +147,11 @@ Task <- R6::R6Class(
 
       self$update_plans()
 
-      message(glue::glue("Running task={self$name} with plans={length(self$plans)} and analyses={self$num_analyses()}"))
+      update_config_log(
+        ss = self$ss,
+        task = self$name,
+        message = glue::glue("Running task={self$name} with plans={length(self$plans)} and analyses={self$num_analyses()}")
+      )
       if (self$num_analyses() == 0) {
         message("Quitting because there is nothing to do (0 analyses)")
         return()

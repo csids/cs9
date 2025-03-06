@@ -1,3 +1,7 @@
+# Version 2025.3.6
+
+- Automatically logging when tasks start running.
+
 # Version 2025.2.24
 
 ### New Features
