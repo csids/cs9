@@ -1,0 +1,11 @@
+pandoc: 2.9.2.1
+pkgdown: 2.1.0
+pkgdown_sha: ~
+articles:
+  cs9: cs9.html
+  file-layout: file-layout.html
+  installation: installation.html
+last_built: 2025-03-10T09:41Z
+urls:
+  reference: https://www.csids.no/cs9/reference
+  article: https://www.csids.no/cs9/articles
